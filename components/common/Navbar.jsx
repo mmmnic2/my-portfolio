@@ -25,7 +25,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between relative py-5">
+    <nav className="fixed w-full z-50 flex items-center justify-between py-5">
       <Link href={"/"} className="relative z-10">
         <Image src={mylogo} width={30} height={30} alt="Portfolio logo" />
       </Link>
