@@ -7,7 +7,7 @@ export const Skills = () => {
       <div className="relative">
         <div className="absolute w-[200px] h-[438px] top-0 right-0 bg-[#7aebfb] blur-[190px]"></div>
         <div>
-          <h3 className="text-white text-center text-4xl mb-6">Skills</h3>
+          <h3 className="text-white text-center text-4xl mb-6 font-extrabold">Skills</h3>
           <SkillList />
         </div>
       </div>

@@ -16,7 +16,7 @@ export const NavBarCollapse = () => {
         {(isExpanded && <XIcon />) || <ListIcon />}
       </div>
       {(isExpanded && (
-        <div className="flex flex-col gap-2 bg-secondary-white rounded-md absolute top-8 right-0">
+        <div className="flex flex-col gap-2 glassmorphism rounded-md absolute top-8 right-0 py-2 px-4">
           {navItems.map((nav) => (
             <Link className="px-4" href={nav.path} key={nav.name}>
               {nav.name}

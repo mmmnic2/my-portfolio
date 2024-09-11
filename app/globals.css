@@ -31,3 +31,12 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components{
+  .glassmorphism {
+    @apply bg-[#323F5D]/30 backdrop-blur-lg border-white/20;
+  }
+  .custom-margin-li {
+    @apply mx-4; /* Apply Tailwind margin utility */
+  }
+}

@@ -8,6 +8,7 @@ import { MSSQLIcon } from "../common/icons/MSSQLIcon";
 import { MySQLIcon } from "../common/icons/MySQLIcon";
 import { NextJSIcon } from "../common/icons/NextJSIcon";
 import { ReactIcon } from "../common/icons/ReactIcon";
+import { ReactQueryIcon } from "../common/icons/ReactQueryIcon";
 import { RedisIcon } from "../common/icons/RedisIcon";
 import { ReduxIcon } from "../common/icons/ReduxIcon";
 import { SpringIcon } from "../common/icons/SpringIcon";
@@ -68,7 +69,7 @@ export const skillItems = [
       },
       {
         name: "React Query",
-        logo: "",
+        logo: <ReactQueryIcon />,
       },
       {
         name: "TailwindCSS",

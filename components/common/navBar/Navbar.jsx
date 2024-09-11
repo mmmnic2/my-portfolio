@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import mylogo from "../../../app/favicon.ico";
 import Image from "next/image";
 import AppButton from "../AppButton";
@@ -7,12 +8,33 @@ import { navItems } from "./constances";
 import { NavBarCollapse } from "./NavBarCollapse";
 
 const Navbar = () => {
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="container fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 flex items-center justify-between py-5">
+    <nav
+      className={`container fixed top-0 left-1/2 -translate-x-1/2 w-full z-50 flex items-center justify-between py-5 ${
+        scroll ? "glassmorphism" : "bg-transparent"
+      }`}
+    >
       <Link href={"/"} className="relative z-10">
         <Image src={mylogo} width={30} height={30} alt="Portfolio logo" />
       </Link>
-      <div className="bg-gradient-nav w-full absolute top-0 left-0 blur-[125px] h-full"></div>
+      <div className="bg-gradient-nav w-full absolute top-0 left-0 blur-[125px] h-full -z-10"></div>
       <div className="hidden lg:flex justify-between gap-4">
         {navItems.map((item, idx) => (
           <Link

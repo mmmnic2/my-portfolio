@@ -2,7 +2,6 @@ import React from "react";
 
 export const SkillItemCollapse = ({ item }) => {
   const twoFirstElement = item.slice(0, 2);
-  console.log(item.length);
   return (
     <div className="flex-1 flex items-center gap-4">
       {twoFirstElement.map((tech) => (
