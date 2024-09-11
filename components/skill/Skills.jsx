@@ -11,7 +11,7 @@ export const Skills = () => {
           <SkillList />
         </div>
       </div>
-      <div className="absolute w-[404px] h-[800px] left-[20%] top-[5%] bg-[rgba(149,66,232,0.35)] blur-[175px] rotate-[-114.2deg] -z-10"></div>
+      <div className="absolute w-[200px] lg:w-[404px] h-[250px] lg:h-[800px] left-[20%] top-[5%] bg-[rgba(149,66,232,0.35)] blur-[175px] rotate-[-114.2deg] -z-10"></div>
     </section>
   );
 };

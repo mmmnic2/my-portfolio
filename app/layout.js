@@ -1,6 +1,6 @@
 import { Lato } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/common/Navbar";
+import Navbar from "@/components/common/navBar/Navbar";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${lato.variable}`}>
-      <body className="bg-primary-black overflow-hidden container mx-auto h-[100vh]">
+      <body className="bg-primary-black container mx-auto h-[100vh]">
         <Navbar />
         {children}
       </body>

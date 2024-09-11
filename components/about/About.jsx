@@ -5,7 +5,7 @@ import ContactList from "./ContactList";
 import Link from "next/link";
 const About = () => {
   return (
-    <section id="home" className="text-white flex gap-20 py-[110px]">
+    <section id="home" className="text-white flex flex-col-reverse items-center lg:flex-row gap-20 py-[110px]">
       <div className="pt-5 basis-1/2">
         <h3 className="text-bold text-4xl">
           <span className="text-secondary-white">
@@ -31,7 +31,7 @@ const About = () => {
           Download CV
         </Link>
       </div>
-      <div className="mx-auto">
+      <div className="mx-0 lg:mx-auto">
         <Image
           src={myImg}
           width={450}
