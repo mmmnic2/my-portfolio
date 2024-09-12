@@ -36,6 +36,9 @@ body {
   .glassmorphism {
     @apply bg-[#323F5D]/30 backdrop-blur-lg border-white/20;
   }
+  .glassmorphism-01 {
+    @apply bg-[hsla(0,0%,100%,0.25)] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[4px] border border-[hsla(0,0%,100%,0.18)];
+  }
   .custom-margin-li {
     @apply mx-4; /* Apply Tailwind margin utility */
   }
