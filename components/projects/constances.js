@@ -4,7 +4,7 @@ export const projects = [
   {
     id: 1,
     name: "Social Media",
-    description: "",
+    technologies: "Java, Spring Boot, TypeScript, NextJS, Redux, TailwindCSS",
     details: {},
     image: socialMedia,
     deployment: 'https://social-media-two-ecru.vercel.app/',
@@ -13,7 +13,7 @@ export const projects = [
   {
     id: 2,
     name: "Music Management",
-    description: "",
+    technologies: "Java, Spring Boot, TypeScript, NextJS, Redux, TailwindCSS",
     details: {},
     image: socialMedia,
     deployment: '',

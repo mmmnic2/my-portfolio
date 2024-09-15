@@ -6,6 +6,8 @@ import { Globe } from "../common/icons/Globe";
 import { ProjectIcon } from "../common/icons/ProjectIcon";
 import { projects } from "./constances";
 import { useState } from "react";
+import { ArrowUpRightFromSquare } from "../common/icons/ArrowUpRightFromSquare";
+import { Tooltip } from "../common/Tooltip";
 
 export const Projects = () => {
   const [isExpanded, setIsExpanded] = useState(1);
@@ -22,7 +24,7 @@ export const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.name}
-            className={`relative lg:flex-[3.5] flex-[10] flex items-center justify-center min-w-[170px] h-[400px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
+            className={`relative lg:flex-[3.5] flex items-center justify-center min-w-[170px] h-[400px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer`}
             onClick={() => setIsExpanded(project.id)}
           >
             <Image
@@ -30,7 +32,7 @@ export const Projects = () => {
               height={700}
               alt="social media project"
               src={project.image}
-              className="absolute w-full h-full rounded-[24px]"
+              className="absolute w-full h-full rounded-[24px] lg:object-none object-cover"
             />
             <div className="absolute bottom-0 p-4 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
               <div className="flex justify-center items-center w-[60px] h-[60px] rounded-[24px] glassmorphism-01 mb-[16px]">
@@ -38,22 +40,30 @@ export const Projects = () => {
                   <ProjectIcon />
                 </div>
               </div>
-              <div className="flex items-center gap-3 font-normal text-[16px] leading-[20.16px] text-white uppercase">
-                View Details:
-                <div className="w-6 h-6">
-                  <Link href={project.deployment} target="blank">
-                    <Globe />
-                  </Link>
-                </div>
-                <div className="w-6 h-6">
-                  <Link href={project.github} target="blank">
-                    <Github />
-                  </Link>
+              <div className="font-normal text-[16px] leading-[20.16px] text-white uppercase tracking-wider">
+                {project.technologies}
+              </div>
+              <div className="flex items-center justify-between mt-[18px]">
+                <h2 className="font-semibold sm:text-[32px] text-[24px] text-white">
+                  {project.name}
+                </h2>
+                <div className="text-white flex items-center gap-4">
+                  <div className="w-6 h-6 relative">
+                    <Tooltip label={"Project Preview"}>
+                      <Link href={project.deployment} target="blank">
+                        <ArrowUpRightFromSquare />
+                      </Link>
+                    </Tooltip>
+                  </div>
+                  <div className="w-6 h-6">
+                    <Tooltip label={"Project Source"}>
+                      <Link href={project.github} target="blank">
+                        <Github />
+                      </Link>
+                    </Tooltip>
+                  </div>
                 </div>
               </div>
-              <h2 className="mt-[18px] font-semibold sm:text-[32px] text-[24px] text-white">
-                {project.name}
-              </h2>
             </div>
           </div>
         ))}
