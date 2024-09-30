@@ -25,8 +25,8 @@ const About = () => {
         <ContactList />
         <Link
           className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-2 px-4 rounded-xl"
-          download={"#"}
-          href={"#"}
+          download={"NguyenDuongHoangLanResume.pdf"}
+          href={"/assets/NguyenDuongHoangLanResume.pdf"}
         >
           Download CV
         </Link>
