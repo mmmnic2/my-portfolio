@@ -5,7 +5,10 @@ import ContactList from "./ContactList";
 import Link from "next/link";
 const About = () => {
   return (
-    <section id="home" className="text-white flex flex-col-reverse items-center lg:flex-row gap-20 py-[110px]">
+    <section
+      id="home"
+      className="text-white flex flex-col-reverse items-center lg:flex-row gap-20 py-[110px]"
+    >
       <div className="pt-5 basis-1/2">
         <h3 className="text-bold text-4xl">
           <span className="text-secondary-white">
@@ -25,8 +28,8 @@ const About = () => {
         <ContactList />
         <Link
           className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-2 px-4 rounded-xl"
-          download={"NguyenDuongHoangLanResume.pdf"}
-          href={"/assets/NguyenDuongHoangLanResume.pdf"}
+          download={"NguyenDuongHoangLan_Resume.pdf"}
+          href={"/assets/NguyenDuongHoangLan_Resume.pdf"}
         >
           Download CV
         </Link>
