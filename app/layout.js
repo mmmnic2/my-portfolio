@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${lato.variable}`}>
-      <body className="bg-primary-black container mx-auto h-[100vh] relative">
+      <body className="bg-primary-black container w-[80%] mx-auto h-[100vh] relative">
         <Navbar />
         {children}
       </body>

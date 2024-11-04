@@ -31,7 +31,7 @@ const Navbar = () => {
         scroll ? "glassmorphism" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-5">
+      <div className="container w-[80%] mx-auto flex items-center justify-between py-5">
         <Link href={"/"} className="relative z-10">
           <Image src={mylogo} width={30} height={30} alt="Portfolio logo" />
         </Link>
