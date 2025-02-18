@@ -48,20 +48,20 @@ export const Projects = () => {
                   {project.name}
                 </h2>
                 <div className="text-white flex items-center gap-4">
-                  <div className="w-6 h-6 relative">
-                    <Tooltip label={"Project Preview"}>
-                      <Link href={project.deployment} target="blank">
+                  <Tooltip label={"Project Preview"}>
+                    <Link href={project.deployment} target="blank">
+                      <div className="w-6 h-6 relative">
                         <ArrowUpRightFromSquare />
-                      </Link>
-                    </Tooltip>
-                  </div>
-                  <div className="w-6 h-6">
-                    <Tooltip label={"Project Source"}>
-                      <Link href={project.github} target="blank">
+                      </div>
+                    </Link>
+                  </Tooltip>
+                  <Tooltip label={"Project Source"}>
+                    <Link href={project.github} target="blank">
+                      <div className="w-6 h-6">
                         <Github />
-                      </Link>
-                    </Tooltip>
-                  </div>
+                      </div>
+                    </Link>
+                  </Tooltip>
                 </div>
               </div>
             </div>
