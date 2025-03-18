@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import myImg from "@/public/assets/images/my_photo.png";
+import myImg from "@/public/assets/images/my_portrait.jpg";
 import ContactList from "./ContactList";
 import Link from "next/link";
 const About = () => {
